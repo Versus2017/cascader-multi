@@ -8,7 +8,7 @@
           <template v-if="multiple || item.multiple">
             <Checkbox :value="checkBoxGroup.indexOf(index) >= 0" @click.native.stop="handleCheckBoxClick" :label="index" class="w-full">{{item.label}}
               <!-- 子级箭头标记 -->
-              <i class="ivu-icon ivu-icon-ios-arrow-right" v-if="item.children && item.children.length"></i>
+              <i class="ivu-icon ivu-icon-ios-arrow-forward" v-if="item.children && item.children.length"></i>
             </Checkbox>
           </template>
           <!-- 单选p -->
@@ -16,7 +16,7 @@
             <p @click="handleClick(index)">
               {{item.label}}
               <!-- 子级箭头标记 -->
-              <i class="ivu-icon ivu-icon-ios-arrow-right" v-if="item.children && item.children.length"></i>
+              <i class="ivu-icon ivu-icon-ios-arrow-forward" v-if="item.children && item.children.length"></i>
             </p>
           </template>
         </li>
